@@ -1,0 +1,26 @@
+[
+  {
+    "ShortName": "Dostava isti dan",
+    "Description": "Dostava isti dan ako je narudžba izvršena do 07:00h",
+    "DeliveryTime": "Isti dan.",
+    "Price": 10
+  },
+  {
+    "ShortName": "2-5 dana",
+    "Description": "Dobij svoju narudžbu u periodu od 2-5 dana.",
+    "DeliveryTime": "2-5 Dana",
+    "Price": 5
+  },
+  {
+    "ShortName": "5-10 dana",
+    "Description": "Veće narudžbe - kupovina na veliko(5-10 dana).",
+    "DeliveryTime": "5-10 Dana",
+    "Price": 2
+  },
+  {
+    "ShortName": "GRATIS",
+    "Description": "Gratis! Za narudžbe koje nisu ograničene vremenski.",
+    "DeliveryTime": "1-2 Sedmice",
+    "Price": 0
+  }
+]

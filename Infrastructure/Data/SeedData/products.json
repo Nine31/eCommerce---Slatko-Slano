@@ -1,0 +1,182 @@
+[
+  {
+    "Name": "Hurmašica sa orasima",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "Price": 20,
+    "PictureUrl": "/images/products/sb-ang1.png",
+    "Category": "Kolači",
+    "Type": "Slatko",
+    "Brand": "Hurmašica",
+    "QuantityInStock": 30
+  },
+  {
+    "Name": "Baklava sa pistacijama",
+    "Description": "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
+    "Price": 35,
+    "PictureUrl": "/images/products/sb-ang2.png",
+    "Category": "Kolači",
+    "Type": "Slatko",
+    "Brand": "Baklava",
+    "QuantityInStock": 70
+  },
+  {
+    "Name": "Tradicionalna baklava",
+    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 30,
+    "PictureUrl": "/images/products/sb-core1.png",
+    "Category": "Kolači",
+    "Type": "Slatko",
+    "Brand": "Baklava",
+    "QuantityInStock": 10
+  },
+  {
+    "Name": "Baklava piramida",
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 30,
+    "PictureUrl": "/images/products/sb-core2.png",
+    "Category": "Kolači",
+    "Type": "Slatko",
+    "Brand": "Baklava",
+    "QuantityInStock": 52
+  },
+  {
+    "Name": "Tulumba",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "Price": 33,
+    "PictureUrl": "/images/products/sb-react1.png",
+    "Category": "Kolači",
+    "Type": "Slatko",
+    "Brand": "Tulumba",
+    "QuantityInStock": 25
+  },
+  {
+    "Name": "Torta Oreo",
+    "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
+    "Price": 500,
+    "PictureUrl": "/images/products/sb-ts1.png",
+    "Category": "Torte",
+    "Type": "Slatko",
+    "Brand": "Torta",
+    "QuantityInStock": 2
+  },
+  {
+    "Name": "Cheesecake",
+    "Description": "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "Price": 25,
+    "PictureUrl": "/images/products/hat-core1.png",
+    "Category": "Kolači",
+    "Type": "Slatko",
+    "Brand": "Cheescake",
+    "QuantityInStock": 18
+  },
+  {
+    "Name": "Španski vjetar",
+    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 28,
+    "PictureUrl": "/images/products/hat-react1.png",
+    "Category": "Kolači",
+    "Type": "Slatko",
+    "Brand": "Španski vjetar",
+    "QuantityInStock": 6
+  },
+  {
+    "Name": "Burek razvijani",
+    "Description": "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "Price": 40,
+    "PictureUrl": "/images/products/hat-react2.png",
+    "Category": "Pite",
+    "Type": "Slano",
+    "Brand": "Burek",
+    "QuantityInStock": 70
+  },
+  {
+    "Name": "Burek slagani",
+    "Description": "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
+    "Price": 30,
+    "PictureUrl": "/images/products/glove-code1.png",
+    "Category": "Pite",
+    "Type": "Slano",
+    "Brand": "Burek",
+    "QuantityInStock": 39
+  },
+  {
+    "Name": "Sirnica",
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 23,
+    "PictureUrl": "/images/products/glove-code2.png",
+    "Category": "Pite",
+    "Type": "Slano",
+    "Brand": "Sirnica",
+    "QuantityInStock": 24
+  },
+  {
+    "Name": "Slane kifle",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.",
+    "Price": 3,
+    "PictureUrl": "/images/products/glove-react1.png",
+    "Category": "Slanci",
+    "Type": "Slano",
+    "Brand": "Kifle",
+    "QuantityInStock": 150
+  },
+  {
+    "Name": "Pletenica",
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 8,
+    "PictureUrl": "/images/products/glove-react2.png",
+    "Category": "Slanci",
+    "Type": "Slano",
+    "Brand": "Pletenica",
+    "QuantityInStock": 45
+  },
+  {
+    "Name": "Lokum bosanski",
+    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 10,
+    "PictureUrl": "/images/products/boot-redis1.png",
+    "Category": "Kolači",
+    "Type": "Slatko",
+    "Brand": "Lokum",
+    "QuantityInStock": 55
+  },
+  {
+    "Name": "Zeljanica",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "Price": 35,
+    "PictureUrl": "/images/products/boot-core2.png",
+    "Category": "Pite",
+    "Type": "Slano",
+    "Brand": "Zeljanica",
+    "QuantityInStock": 28
+  },
+  {
+    "Name": "Rafaelo torta",
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 350,
+    "PictureUrl": "/images/products/boot-core1.png",
+    "Category": "Torte",
+    "Type": "Slatko",
+    "Brand": "Rafaelo",
+    "QuantityInStock": 1
+  },
+  {
+    "Name": "Palačinke sa eurokremom",
+    "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
+    "Price": 30.99,
+    "PictureUrl": "/images/products/boot-ang2.png",
+    "Category": "Palačinka",
+    "Type": "Slatko",
+    "Brand": "Palačinka",
+    "QuantityInStock": 9
+  },
+  {
+    "Name": "Palačinke sa pekmezom",
+    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 35.99,
+    "PictureUrl": "/images/products/boot-ang1.png",
+    "Category": "Palačinka",
+    "Type": "Slatko",
+    "Brand": "Palačinka",
+    "QuantityInStock": 5
+  }
+]
