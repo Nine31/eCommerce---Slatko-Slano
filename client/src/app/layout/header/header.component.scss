@@ -10,3 +10,84 @@
     width: 32px;
     height: 32px;
 }
+
+a {
+    &.active {
+        color: rgb(33, 142, 226) !important;
+    }
+}
+
+.pocetna {
+    color: #000;
+    font-family: monospace;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.pocetna:hover
+{
+    color: rgb(33, 142, 226);
+    font-family: monospace;
+}
+
+.prodavnica {
+    color: #000;
+    font-family: monospace;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.prodavnica:hover
+{
+    color: rgb(33, 142, 226);
+    font-family: monospace;
+}
+
+.kontakt {
+    color: #000;
+    font-family: monospace;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.kontakt:hover
+{
+    color: rgb(33, 142, 226);
+    font-family: monospace;
+}
+
+.add_shopping_cart_header {
+    color: #000;
+}
+
+.login {
+    color: rgb(33, 142, 226) !important;
+    background-color: rgba(235, 235, 255, 0.351) !important;
+    font-family: monospace !important;
+    font-size: 17px !important;
+    font-weight: 500 !important;
+}
+
+.login:hover {
+    color: #FFFFFF !important;
+    background-color: rgb(33, 142, 226) !important;
+    font-family: monospace !important;
+    font-size: 17px !important;
+    font-weight: 800 !important;
+}
+
+.register {
+    color: rgb(33, 142, 226) !important;
+    background-color: rgba(235, 235, 255, 0.351) !important;
+    font-family: monospace !important;
+    font-size: 17px !important;
+    font-weight: 500 !important;
+}
+
+.register:hover {
+    color: #FFFFFF !important;
+    background-color: rgb(33, 142, 226) !important;
+    font-family: monospace !important;
+    font-size: 17px !important;
+    font-weight: 800 !important;
+}

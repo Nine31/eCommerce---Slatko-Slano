@@ -1,0 +1,53 @@
+
+.icon {
+    color: rgba(0, 0, 0, 0.3);
+    transition: color 0.3s ease; 
+}
+
+form:focus-within .icon {
+    color: rgba(33, 142, 226, 0.6);
+    font-weight: 700;
+}
+
+form input {
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.6);
+    transition: box-shadow 0.3s ease, color 0.3s ease;
+    font-family: 'Dancing Script', cursive;
+    font-size: 22px;
+    font-weight: 500;
+    outline: none;
+    opacity: 0.6;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+form input:focus {
+    box-shadow: 2px 2px 0px 0px rgba(33, 142, 226, 0.6);
+    color: rgba(33, 142, 226, 0.6);
+    opacity: 1;
+    font-weight: 900;
+}
+
+form input:focus::placeholder {
+    color: rgba(33, 142, 226, 0.6);
+}
+
+.match-input-height {
+    color: rgb(33, 142, 226);
+    font-family: monospace;
+    background-color: rgba(235, 235, 255, 0.351);
+}
+
+.match-input-height:hover {
+    color: #FFF;
+    background: #218EE2 !important;
+    background-color: rgba(235, 235, 255, 0.351);
+}
+  
+mat-paginator {
+    background-color: rgba(33,142,226,0.05);
+    color: #000;
+    font-family: monospace !important;
+    font-size: 12px;
+}
+
+  

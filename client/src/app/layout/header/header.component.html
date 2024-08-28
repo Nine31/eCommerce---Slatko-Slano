@@ -1,14 +1,25 @@
 <header class="border-b shadow-lg p-3 w-full">
     <div class="flex align-middle items-center justify-between max-w-screen-2xl mx-auto">
-        <img src="/images/logo.png" alt="app logo"  width="115px;"/>
+        <img routerLink="/" src="/images/logo.png" alt="app logo"  width="115px;"/>
         <nav class="flex gap-3 my-2 uppercase text-xl">
-            <a class="pocetna">Početna</a>
-            <a class="prodavnica">Prodavnica</a>
-            <a class="kontakt">Kontakt</a>
+            <a routerLink="/" 
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}" 
+                class="pocetna">
+                    Početna
+            </a>
+            <a routerLink="prodavnica" 
+                routerLinkActive="active" 
+                class="prodavnica">
+                    Prodavnica
+            </a>
+            <a class="kontakt">
+                    Kontakt
+            </a>
         </nav>
         <div class="flex gap-3 align-middle">
-            <a matBadge="5" matBadgeSize="large" class="custom-badge mt-2 mr-2">
-                <mat-icon class="add_shopping_cart_navbar">shopping_cart</mat-icon>
+            <a matBadge="2" matBadgeSize="large" class="custom-badge mt-2 mr-2">
+                <mat-icon class="add_shopping_cart_header">shopping_cart</mat-icon>
             </a>
             <button class="login" mat-raised-button>Prijava</button>
             <button class="register" mat-raised-button>Registracija</button>

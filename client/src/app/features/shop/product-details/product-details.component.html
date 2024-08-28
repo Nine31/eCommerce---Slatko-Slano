@@ -1,0 +1,38 @@
+@if (product) {
+    <section class="py-8">
+        <div class="max-w-screen-2xl px-4 mx-auto">
+            <div class="grid grid-cols-2 gap-8">
+                <div class="max-w-xl mx-auto">
+                    <img class="w-full" src="{{product.pictureUrl}}" alt="slika"/>
+                </div>
+
+                <div>
+                    <h1 class="text-2xl font-semibold">{{product.name}}</h1>
+                    <div class="mt-4 items-center gap-4 flex">
+                        <p class="text-3xl font-extrabold text-gray-900">
+                            {{product.price | currency:'':'':'1.2-2'}} KM
+                        </p>
+                    </div>
+
+                    <div class="flex gap-4 mt-6">
+                        <button mat-flat-button class="match-input-height">
+                            <mat-icon>shopping_cart</mat-icon>
+                            Dodaj u korpu
+                        </button>
+
+                        <mat-form-field class="kolicina custom-background" color="accent">
+                            <mat-label class="quantity">Količina</mat-label>
+                            <input matInput type="number">
+                        </mat-form-field>
+                    </div>
+
+                    <mat-divider></mat-divider>
+
+                    <p class="mt-6 text-gray-500">
+                        {{product.description}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+}

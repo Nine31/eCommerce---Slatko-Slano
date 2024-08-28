@@ -30,7 +30,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule
 ],
   templateUrl: './shop.component.html',
-  styleUrl: './shop.component.scss'
+  styleUrl: './shop.component.scss',
 })
 export class ShopComponent {  
   private shopService = inject(ShopService);
