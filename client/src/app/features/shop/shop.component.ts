@@ -32,7 +32,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.scss',
 })
-export class ShopComponent {  
+export class ShopComponent { 
   private shopService = inject(ShopService);
   private dialogService = inject(MatDialog);
   products?: Pagination<Product>;

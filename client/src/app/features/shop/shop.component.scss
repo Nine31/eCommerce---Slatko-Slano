@@ -2,11 +2,13 @@
 .icon {
     color: rgba(0, 0, 0, 0.3);
     transition: color 0.3s ease; 
+    margin-top: -30px;
 }
 
 form:focus-within .icon {
     color: rgba(33, 142, 226, 0.6);
     font-weight: 700;
+    margin-top: -30px;
 }
 
 form input {
@@ -15,6 +17,7 @@ form input {
     font-family: 'Dancing Script', cursive;
     font-size: 22px;
     font-weight: 500;
+    margin-top: -30px;
     outline: none;
     opacity: 0.6;
     color: rgba(0, 0, 0, 0.4);
@@ -48,6 +51,7 @@ mat-paginator {
     color: #000;
     font-family: monospace !important;
     font-size: 12px;
+    margin-bottom: 15px;
 }
 
   

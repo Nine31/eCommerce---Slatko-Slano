@@ -1,0 +1,23 @@
+.spinner {
+    margin-left: 850px;
+    padding-top: -10px;
+    accent-color: #221 !important;
+    color: #000;
+    content: 'Učitava se';
+}
+
+.spinner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh;
+  }
+  
+  .spinner-content {
+    margin-top: 120px;
+    text-align: center;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.9);
+    font-family: monospace !important;
+  }
