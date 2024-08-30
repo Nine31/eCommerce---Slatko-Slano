@@ -18,7 +18,7 @@
             </a>
         </nav>
         <div class="flex gap-3 align-middle">
-            <a matBadge="2" matBadgeSize="large" class="custom-badge mt-2 mr-2">
+            <a routerLink="/korpa" routerLinkActive="active" matBadge="{{cartService.itemCount()}}" matBadgeSize="large" class="custom-badge mt-2 mr-2">
                 <mat-icon class="add_shopping_cart_header">shopping_cart</mat-icon>
             </a>
             <button class="login" mat-raised-button>Prijava</button>

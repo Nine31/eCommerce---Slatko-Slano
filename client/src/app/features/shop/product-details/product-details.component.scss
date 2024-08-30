@@ -5,7 +5,27 @@
    font-weight: 600;
 }
 
+.quantityincart{
+   color: #000;
+   font-family: monospace;
+   font-size: 12px;
+   font-weight: 400;
+}
+
+span {
+   color: rgba(28, 226, 28, 0.818);
+   font-family: monospace;
+   font-size: 25px;
+   font-weight: 900;
+}
+
 .match-input-height {
+    font-family: monospace;
+    color: #FFF;
+    font-size: 15px;
+}
+
+.match-input-height:hover {
     background-color: rgb(33, 142, 226);
     font-family: monospace;
     color: #FFF;
