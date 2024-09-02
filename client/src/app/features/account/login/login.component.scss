@@ -1,0 +1,66 @@
+@use '@angular/material' as mat;
+
+#card{
+    background-color: rgb(247, 247, 247);
+    font-family: monospace;
+    border-radius: 20px;
+    position: absolute;
+    margin-left: 500px;
+    box-shadow: 10px 10px 5px -3px rgba(0, 92, 187, 0.75);
+    -webkit-box-shadow: 10px 10px 5px -3px rgba(0, 92, 187, 0.75);
+    -moz-box-shadow: 10px 10px 5px -3px rgba(0, 92, 187, 0.75);
+}
+
+.text-primary {
+    color: rgb(33, 142, 226);
+    font-family: monospace;
+    font-size: 35px;
+}
+
+.py-2 {
+    color: rgb(33, 142, 226) !important;
+    background-color: #FFF;
+    font-family: monospace !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    box-shadow: 5px 5px 5px -3px rgba(0, 92, 187, 0.75);
+    -webkit-box-shadow: 5px 5px 5px -3px rgba(0, 92, 187, 0.75);
+    -moz-box-shadow: 5px 5px 5px -3px rgba(0, 92, 187, 0.75);
+}
+
+.py-2:hover {
+    color: #FFF !important;
+    background-color: rgb(33, 142, 226) !important;
+    font-family: monospace !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+}
+
+.email {
+    color: rgb(33, 142, 226);
+    font-family: monospace;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.lozinka {
+    color: rgb(33, 142, 226);
+    font-family: monospace;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+// #field {
+//     height: 58px;
+//     border-radius: 7px;
+// }
+  
+ #input {
+     color: #000;
+     font-family: monospace;
+     font-weight: 600;
+} 
+
+mat-form-field.mat-form-field {
+    color:white !important;
+  }

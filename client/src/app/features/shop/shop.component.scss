@@ -12,10 +12,13 @@ form:focus-within .icon {
 }
 
 form input {
-    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: 6px 6px 5px 0px rgba(120, 120, 120, 0.85);
+    -webkit-box-shadow: 6px 6px 5px 0px rgba(120, 120, 120, 0.85);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(120, 120, 120, 0.85);
+    // box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.6);
     transition: box-shadow 0.3s ease, color 0.3s ease;
     font-family: 'Dancing Script', cursive;
-    font-size: 22px;
+    font-size: 25px;
     font-weight: 500;
     margin-top: -30px;
     outline: none;
@@ -24,8 +27,11 @@ form input {
 }
 
 form input:focus {
-    box-shadow: 2px 2px 0px 0px rgba(33, 142, 226, 0.6);
-    color: rgba(33, 142, 226, 0.6);
+    box-shadow: 6px 6px 5px 0px rgba(33, 142, 226, 0.85);
+    -webkit-box-shadow: 6px 6px 5px 0px rgba(33, 142, 226, 0.85);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(33, 142, 226, 0.85);
+    // box-shadow: 2px 2px 0px 0px rgba(33, 142, 226, 0.6);
+    color: rgba(33, 142, 226, 0.9);
     opacity: 1;
     font-weight: 900;
 }
@@ -47,6 +53,17 @@ form input:focus::placeholder {
 }
   
 mat-paginator {
+    background-color: rgba(33,142,226,0.05);
+    color: #000;
+    font-family: monospace !important;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+mat-paginator:hover {
+    box-shadow: 6px 6px 5px 0px rgba(33, 142, 226, 0.85);
+    -webkit-box-shadow: 6px 6px 5px 0px rgba(33, 142, 226, 0.85);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(33, 142, 226, 0.85);
     background-color: rgba(33,142,226,0.05);
     color: #000;
     font-family: monospace !important;

@@ -8,6 +8,7 @@ import { MatPaginatorIntl } from '@angular/material/paginator';
 import { loadingInterceptor } from './core/interceptors/loading.interceptor';
 import { InitService } from './core/services/init.service';
 import { lastValueFrom } from 'rxjs';
+import { authInterceptor } from './core/interceptors/auth.interceptor';
 
 function initializeApp(initService: InitService) {
   return () => lastValueFrom(initService.init()).finally(() => {
@@ -23,7 +24,10 @@ export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }), 
     provideRouter(routes), 
     provideAnimationsAsync(), 
-    provideHttpClient(withInterceptors([loadingInterceptor])),
+    provideHttpClient(withInterceptors([
+      loadingInterceptor,
+      authInterceptor
+    ])),
     {
       provide: MatPaginatorIntl, 
       useClass: CustomPaginatorIntl

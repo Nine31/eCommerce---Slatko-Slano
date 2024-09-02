@@ -1,0 +1,24 @@
+#card{
+    background-color: rgb(247, 247, 247);
+    border-radius: 20px;
+    position: absolute;
+    margin-left: 500px;
+    margin-top: 70px;
+    box-shadow: 10px 10px 5px -3px rgba(0, 92, 187, 0.75);
+    -webkit-box-shadow: 10px 10px 5px -3px rgba(0, 92, 187, 0.75);
+    -moz-box-shadow: 10px 10px 5px -3px rgba(0, 92, 187, 0.75);
+}
+
+h1 {
+  color: rgb(33, 142, 226);
+  font-family: monospace;
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.input {
+    color: rgb(33, 142, 226) !important;
+    font-family: monospace !important;
+    font-size: 35px;
+    font-weight: 800; 
+}
