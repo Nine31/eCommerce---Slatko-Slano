@@ -1,0 +1,57 @@
+#title {
+    color: rgb(33, 142, 226);
+    font-family: monospace;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+#text {
+   color: #000;
+   font-family: monospace;
+   font-size: 16px;
+   font-weight: 300;
+}
+
+.font-normal {
+    color: #000;
+    font-family: monospace;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.font-medium {
+    color: rgb(33, 142, 226);
+    font-family: monospace;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#narudzba {
+    background-color: transparent;
+    color: #000;
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: 600;
+    border-color: #000;
+}
+
+#narudzba:hover {
+    background: rgb(33, 142, 226) !important;
+    color: #FFF;
+    border-color: #FFF;
+}
+
+#kupovina {
+    background-color: transparent;
+    color: #000;
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: 600;
+    border-color: rgb(33, 142, 226);
+}
+
+#kupovina:hover {
+    background-color: rgb(33, 142, 226) !important;
+    color: #FFF;
+    border-color: #FFF;
+}

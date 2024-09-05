@@ -5,15 +5,13 @@
 </div>
 
 @if (busyService.loading) {
-    <mat-progress-spinner 
-        class="spinner fixed top-20 z-50" 
-        color="accent" 
+    <mat-progress-spinner
+        class="spinner fixed top-20 z-50"
         diameter="120" 
         mode="indeterminate">
     </mat-progress-spinner>
 
     <div class="spinner-content">
-        <!-- Lägg till ditt innehåll här -->
         <p>Učitavanje podataka, molimo pričekajte...</p>
     </div>
 }

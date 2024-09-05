@@ -1,0 +1,56 @@
+a {
+    font-family: monospace;
+    font-size: 17px;
+    color: #000;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+a:hover {
+    font-family: monospace;
+    font-size: 17px;
+    color: rgb(33, 142, 226);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.cijena {
+    font-family: monospace;
+    font-size: 18px;
+    color: #000;
+    font-weight: 600;
+}
+
+#minus{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid red;
+    background-color: transparent;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#minus:hover, #plus:hover {
+    background-color: #f0f0f0;
+    border-color: #888;
+}
+
+#plus {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid green;
+    background-color: transparent;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#plus:hover {
+    background-color: #f0f0f0;
+    border-color: #888;
+}

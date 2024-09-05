@@ -1,8 +1,33 @@
 .icon-display {
     transform: scale(4);
-    color: rgb(33, 142, 226)
+    color: rgb(33, 142, 226);
+}
+
+#okvir {
+    box-shadow: 10px 10px 5px -3px rgba(0, 92, 187, 0.75);
+    -webkit-box-shadow: 10px 10px 5px -3px rgba(0, 92, 187, 0.75);
+    -moz-box-shadow: 10px 10px 5px -3px rgba(0, 92, 187, 0.75);
+}
+
+.mb-4 {
+    font-family: monospace;
+    color: #000;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .btn {
+    font-family: monospace;
+    color: #000;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    font-family: monospace;
+    color: #FFF;
     background-color: rgb(33, 142, 226);
+    font-size: 15px;
+    font-weight: 600;
 }

@@ -3,7 +3,7 @@ import { MatPaginatorIntl } from "@angular/material/paginator";
 
 @Injectable()
 export class CustomPaginatorIntl extends MatPaginatorIntl {
-  override itemsPerPageLabel = 'Stavki po stranici:';
+  override itemsPerPageLabel = 'Proizvoda po stranici:';
   override nextPageLabel = 'Sljedeća stranica';
   override previousPageLabel = 'Prethodna stranica';
   override firstPageLabel = 'Prva stranica';

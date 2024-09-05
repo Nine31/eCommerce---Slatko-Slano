@@ -22,7 +22,7 @@
                 <mat-icon class="add_shopping_cart_header">shopping_cart</mat-icon>
             </a>
             @if (accountService.currentUser()) {
-                <button class="logout" mat-button [matMenuTriggerFor]="menu">
+                <button class="logout" mat-stroked-button [matMenuTriggerFor]="menu">
                     <mat-icon>arrow_drop_down</mat-icon>
                     <span>{{accountService.currentUser()?.firstName}}</span>
                 </button>

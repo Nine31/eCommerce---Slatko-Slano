@@ -1,46 +1,48 @@
 <div class="mx-auto max-w-4xl flex-1 space-y-6 w-full">
     <div class="space-y-4 rounded-lg border border-gray-200 p-4 bg-white shadow-sm">
-        <p class="text-xl font-semibold">Sažetak narudžbe</p>
+        <p class="title">Sažetak narudžbe</p>
         <div class="space-y-4">
             <div class="space-y-2">
                 <dl class="flex items-center justify-between gap-4">
-                    <dt class="font-medium text-gray-500">Međuzbir</dt>
-                    <dd class="font-medium text-gray-900">
+                    <dt class="zbir">Međuzbir</dt>
+                    <dd class="cijena">
                         {{cartService.totals()?.subtotal | currency:'':'':'1.2-2'}} KM
                     </dd>
                 </dl>
                 <dl class="flex items-center justify-between gap-4">
-                    <dt class="font-medium text-gray-500">Popust</dt>
-                    <dd class="font-medium text-green-500">
+                    <dt class="popust-text">Popust</dt>
+                    <dd class="popust-cijena">
                         {{cartService.totals()?.discount | currency:'':'':'1.2-2'}} KM
                     </dd>
                 </dl>
                 <dl class="flex items-center justify-between gap-4">
-                    <dt class="font-medium text-gray-500">Troškovi dostave</dt>
-                    <dd class="font-medium text-gray-900">
+                    <dt class="dostava">Troškovi dostave</dt>
+                    <dd class="cijena">
                         {{cartService.totals()?.shipping | currency:'':'':'1.2-2'}} KM
                     </dd>
                 </dl>
             </div>
 
             <dl class="flex items-center justify-between gap-4 border-t border-gray-200 pt-2">
-                <dt class="font-medium text-gray-500">Ukupno</dt>
-                <dd class="font-medium text-gray-900">
+                <dt class="ukupno">Ukupno</dt>
+                <dd class="ukupno-cijena">
                     {{cartService.totals()?.total | currency:'':'':'1.2-2'}} KM
                 </dd>
             </dl>
         </div>
 
-        <div class="flex flex-col gap-2">
-            <button routerLink="/blagajna"  mat-flat-button>Blagajna</button>
-            <button routerLink="/prodavnica" mat-button>Nastavi kupovinu</button>
-        </div>
+        @if (location.path() !== '/blagajna') {
+            <div class="flex flex-col gap-2">
+                <button class="blagajna" routerLink="/blagajna"  mat-flat-button>Blagajna</button>
+                <button class="kupovina" routerLink="/prodavnica" mat-button>Nastavi kupovinu</button>
+            </div>
+        }
 
     </div>
 
     <div class="space-y-4 rounded-lg border border-gray-200 bg-white shadow-sm">
         <form class="space-y-2 flex flex-col p-2">
-            <label class="mb-2 block text-sm font-medium">
+            <label class="mb-2">
                 Imate li kod za vaučer?
             </label>
             <!-- <div *ngIf="cartService.cart()?.coupon as coupon" class="flex justify-between items-center">
@@ -52,7 +54,7 @@
                     <mat-icon color="warn">delete</mat-icon>
                 </button>
             </div> -->
-            <mat-form-field appearance="outline">
+            <mat-form-field appearance="outline" id="form">
                 <mat-label>Vaučer kod</mat-label>
                 <input
                     type="text" 
@@ -60,7 +62,8 @@
                 >
             </mat-form-field>
 
-            <button  
+            <button 
+                class="primjeni-kod" 
                 mat-flat-button>Primijeni kod</button>
         </form>
     </div>
