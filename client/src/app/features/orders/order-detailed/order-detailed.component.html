@@ -1,0 +1,96 @@
+@if (order) {
+    <mat-card class="bg-white py-8 shadow-md max-w-screen-lg mx-auto">
+        <div class="px-4 w-full">
+            <div class="flex justify-between items-center align-middle">
+                <h2>Sažetak narudžbe za narudžbu #{{order.id}}</h2>
+                <button class="narudzbe" routerLink="/narudzbe" mat-stroked-button>Vrati se na narudzbe</button>
+                <!-- <button (click)="onReturnClick()" mat-stroked-button>{{buttonText}}</button> -->
+            </div>
+            <div class="mt-8 py-3 border-t border-gray-200 flex gap-16">
+                <div class="space-y-2">
+                    <h4 class="info">Informacije o naplati i dostavi</h4>
+                    <dl>
+                        <dt class="adresa-naslov">Adresa za dostavu</dt>
+                        <dd class="adresa">{{order.shippingAddress | address}}</dd>
+                    </dl>
+                    <dl>
+                        <dt class="placanje-naslov">Informacije o plaćanju</dt>
+                        <dd class="placanje">{{order.paymentSummary | paymentCard}}</dd>
+                    </dl>
+                </div>
+                <div class="space-y-2">
+                    <h4 class="narudzba">Detalji narudžbe</h4>
+                    <dl>
+                        <dt class="email-naslov">Email adresa</dt>
+                        <dd class="email">{{order.buyerEmail}}</dd>
+                    </dl>
+                    <dl>
+                        <dt class="status-naslov">Status narudžbe</dt>
+                        <dd class="status">{{translateOrderStatus(order.status)}}</dd>
+                    </dl>
+                    <dl>
+                        <dt class="datum-naslov">Datum narudžbe</dt>
+                        <dd class="datum">{{order.orderDate | date: 'medium'}}</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <div class="border-y border-gray-200">
+                    <table class="w-full text-center">
+                        <tbody class="divide-y divide-gray-200">
+                            @for (item of order.orderItems; track item.productId) {
+                                <tr>
+                                    <td class="py-4">
+                                        <div class="flex items-center gap-4">
+                                            <img src="{{item.pictureUrl}}" alt="product image" 
+                                                class="w-10 h-10">
+                                            <span class="ime">{{item.productName}}</span>
+                                        </div>
+                                    </td>
+                                    <td class="p-4" id="kolicina">x{{item.quantity}}</td>
+                                    <td class="p-4 text-right" id="cijena">{{item.price | currency:'':'':'1.2-2'}} KM</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="space-y-4 rounded-lg border-y border-gray-200 p-4 bg-white">
+                <p class="sazetak-narudzbe">Sažetak narudžbe</p>
+                <div class="space-y-4">
+                    <div class="space-y-2">
+                        <dl class="flex items-center justify-between gap-4">
+                            <dt class="meduzbir">Međuzbir</dt>
+                            <dd class="cijena">
+                                {{order.subtotal | currency:'':'':'1.2-2'}} KM
+                            </dd>
+                        </dl>
+                        <dl class="flex items-center justify-between gap-4">
+                            <dt class="popust-naslov">Popust</dt>
+                            <dd class="popust">
+                                <!-- -{{order.discount | currency}} -->
+                            </dd>
+                        </dl>
+                        <dl class="flex items-center justify-between gap-4">
+                            <dt class="troskovi-dostave">Troškovi dostave</dt>
+                            <dd class="cijena">
+                                {{order.shippingPrice| currency:'':'':'1.2-2'}} KM
+                            </dd>
+                        </dl>
+                    </div>
+        
+                    <dl class="flex items-center justify-between gap-4 border-t border-gray-200 pt-2">
+                        <dt class="ukupno">Ukupno</dt>
+                        <dd class="cijena-ukupno">
+                            {{order.total | currency:'':'':'1.2-2'}} KM
+                        </dd>
+                    </dl>
+                </div>
+                 
+            </div>
+
+        </div>
+    </mat-card>
+}

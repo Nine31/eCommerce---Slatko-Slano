@@ -1,16 +1,88 @@
+.formular {
+    background-color: #FFF;
+    box-shadow: 5px 5px 5px -3px rgba(33, 142, 226, 0.75);
+    -webkit-box-shadow: 5px 5px 5px -3px rgba(33, 142, 226, 0.75);
+    -moz-box-shadow: 5px 5px 5px -3px rgba(33, 142, 226, 0.75);
+}
+
 #kupovina {
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: 600;
+    color: #000;
+    background-color: #FFF;
+}
+
+#kupovina:hover {
     font-family: monospace;
     font-size: 12px;
     color: #FFF;
     background-color: rgb(33, 142, 226);
 }
 
-span {
+#dostava {
     font-family: monospace;
     font-size: 12px;
+    font-weight: 600;
     color: #000;
+    background-color: #FFF;
+}
+
+#dostava:hover {
+    font-family: monospace;
+    font-size: 12px;
+    color: #FFF;
+    background-color: rgb(33, 142, 226);
+}
+
+#placanje {
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: 600;
+    color: #000;
+    background-color: #FFF;
+}
+
+#placanje:hover {
+    font-family: monospace;
+    font-size: 12px;
+    color: #FFF;
+    background-color: rgb(33, 142, 226);
+}
+
+#potvrda {
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: 600;
+    color: #000;
+    background-color: #FFF;
+}
+
+#potvrda:hover {
+    font-family: monospace;
+    font-size: 12px;
+    color: #FFF;
+    background-color: rgb(33, 142, 226);
+}
+
+
+.address {
+    font-family: monospace;
+    font-size: 14px;
+    color: #000;
+}
+
+#address-element {
+    font-family: monospace;
 }
 
 #payment-element {
     font-family: monospace;
+}
+
+.placanje-potvrda {
+    font-family: monospace;
+    font-weight: 600;
+    background-color: rgb(33, 142, 226);
+    color: #FFF;
 }

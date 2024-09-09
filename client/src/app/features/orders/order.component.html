@@ -1,0 +1,27 @@
+<div class="mx-auto mt-32">
+    <h2 class="mb-10 text-center">Moje narudžbe</h2>
+    <div class="flex flex-col">
+        <div class="w-full">
+            <table class="min-w-full divide-y divide-blue-200 cursor-pointer">
+                <thead class="bg-gray-50">
+                    <tr class="naslovi">
+                        <th class="text-center px-6 py-3">Narudžba</th>
+                        <th class="text-center">Datum</th>
+                        <th class="text-center">Ukupno</th>
+                        <th class="text-center">Status</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-blue-200">
+                    @for (order of orders; track order.id) {
+                        <tr routerLink="/narudzba/{{order.id}}" class="hover:bg-blue-100">
+                            <th class="px-6 py-3" id="redni-broj"># {{order.id}}</th>
+                            <td>{{order.orderDate | date: 'medium'}}</td>
+                            <td>{{order.total | currency:'':'':'1.2-2'}} KM</td>
+                            <td>{{translateOrderStatus(order.status)}}</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

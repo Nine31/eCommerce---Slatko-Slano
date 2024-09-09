@@ -2,7 +2,6 @@ import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
 import { CartService } from '../services/cart.service';
 import { SnackbarService } from '../services/snackbar.service';
-import { MatSnackBar } from '@angular/material/snack-bar';
 
 export const emptyCartGuard: CanActivateFn = (route, state) => {
   const cartService = inject(CartService);
@@ -11,7 +10,7 @@ export const emptyCartGuard: CanActivateFn = (route, state) => {
 
   if (!cartService.cart() || cartService.cart()?.items.length === 0) {
     snack.error('Tvoja korpa je prazna');
-    router.navigateByUrl('/blagajna');
+    router.navigateByUrl('/prodavnica');
     return false;
   }
   return true;

@@ -6,9 +6,9 @@
     border-radius: 20px;
     position: absolute;
     margin-left: 500px;
-    box-shadow: 10px 10px 5px -3px rgba(0, 92, 187, 0.75);
-    -webkit-box-shadow: 10px 10px 5px -3px rgba(0, 92, 187, 0.75);
-    -moz-box-shadow: 10px 10px 5px -3px rgba(0, 92, 187, 0.75);
+    box-shadow: 7px -5px 8px -2px rgba(33,142,226,0.75);
+    -webkit-box-shadow: 7px -5px 8px -2px rgba(33,142,226,0.75);
+    -moz-box-shadow: 7px -5px 8px -2px rgba(33,142,226,0.75);
 }
 
 .text-primary {
@@ -23,9 +23,9 @@
     font-family: monospace !important;
     font-size: 20px !important;
     font-weight: 500 !important;
-    box-shadow: 5px 5px 5px -3px rgba(0, 92, 187, 0.75);
-    -webkit-box-shadow: 5px 5px 5px -3px rgba(0, 92, 187, 0.75);
-    -moz-box-shadow: 5px 5px 5px -3px rgba(0, 92, 187, 0.75);
+    box-shadow: 5px 5px 5px -3px rgba(33, 142, 226, 0.75);
+    -webkit-box-shadow: 5px 5px 5px -3px rgba(33, 142, 226, 0.75);
+    -moz-box-shadow: 5px 5px 5px -3px rgba(33, 142, 226, 0.75);
 }
 
 .py-2:hover {
@@ -55,11 +55,17 @@
 //     border-radius: 7px;
 // }
   
- #input {
+ #email-input {
      color: #000;
      font-family: monospace;
      font-weight: 600;
-} 
+}
+
+#lozinka-input {
+    color: #000;
+    font-family: monospace;
+    font-weight: 600;
+}
 
 mat-form-field.mat-form-field {
     color:white !important;

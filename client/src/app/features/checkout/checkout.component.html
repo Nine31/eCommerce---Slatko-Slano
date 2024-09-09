@@ -4,7 +4,7 @@
             (selectionChange)="onStepChange($event)"
             [linear]="true"
             #stepper 
-            class="bg-white border border-gray-200 shadow-sm">
+            class="formular">
             <mat-step label="Adresa" [completed]="completionStatus().address">
                 <div id="address-element"></div>
                 <div class="flex justify-end mt-1">
@@ -12,7 +12,7 @@
                         [checked]="saveAddress"
                         (change)="onSaveAddressCheckboxChange($event)"
                     >
-                        <span>Sačuvaj kao zadanu adresu</span>
+                        <span class="address">Sačuvaj kao zadanu adresu</span>
                     </mat-checkbox>
                 </div>
                 <div class="flex justify-between mt-6">
@@ -27,7 +27,7 @@
             <mat-step label="Dostava" [completed]="completionStatus().delivery">
                 <app-checkout-delivery (deliveryComplete)="handleDeliveryChange($event)"></app-checkout-delivery>
                 <div class="flex justify-between mt-6">
-                    <button matStepperPrevious mat-stroked-button>Prethodni</button>
+                    <button id="dostava" matStepperPrevious mat-stroked-button>Prethodni</button>
                     <button 
                         [disabled]="!completionStatus().delivery"
                         matStepperNext mat-flat-button>Slijedeći
@@ -37,8 +37,9 @@
             <mat-step label="Plaćanje" [completed]="completionStatus().card">
                 <div id="payment-element"></div>
                 <div class="flex justify-between mt-6">
-                    <button matStepperPrevious mat-stroked-button>Prethodni</button>
-                    <button 
+                    <button id="placanje" matStepperPrevious mat-stroked-button>Prethodni</button>
+                    <button
+                        class="slijedeci-placanje" 
                         [disabled]="!completionStatus().card"
                         matStepperNext mat-flat-button>Slijedeći
                     </button>
@@ -47,10 +48,11 @@
             <mat-step label="Potvrda">
                 <app-checkout-review [confirmationToken]="confirmationToken"></app-checkout-review>
                 <div class="flex justify-between mt-6">
-                    <button matStepperPrevious mat-stroked-button>Prethodni</button>
+                    <button id="potvrda" matStepperPrevious mat-stroked-button>Prethodni</button>
                     <button 
+                        class="placanje-potvrda"
                         [disabled]="!confirmationToken || loading"
-                        (click)="confirmPayment(stepper)" mat-flat-button
+                        (click)="confirmPayment(stepper)" mat-raised-button
                     >
                         @if (loading) {
                             <mat-spinner diameter="20"></mat-spinner>

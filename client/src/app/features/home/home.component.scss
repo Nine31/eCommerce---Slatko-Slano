@@ -1,0 +1,73 @@
+#izgled {
+    padding-top: 50px;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .my-6 {
+    font-family: monospace;
+    font-size: 45px;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 700;
+  }
+
+  #slika{
+    height: 450px;
+  }
+  
+  .button {
+      position: relative;
+      cursor: pointer;
+      margin-top: 150px;
+      
+      span {
+        font-family: monospace;
+        color: #FFF;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        line-height: 58px;
+        text-transform: uppercase;
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 600;
+      }
+      
+      .border {
+          fill: none;
+          stroke-width: 1;
+      }
+      
+      .bg-line {
+          fill: rgb(33, 142, 226, 0.75);
+          stroke: #FFF;
+          transition: all .8s ease-in-out;
+      }
+      
+      .hl-line {
+          stroke: #000;
+          stroke-dasharray: 40 480;
+          stroke-dashoffset: 40;
+          transition: all .8s ease-in-out;
+      }
+      
+      &:hover {
+          
+          .bg-line {
+              fill: rgb(33, 142, 226, 1.0);
+          }
+          
+          .hl-line {
+              stroke-dashoffset: -480;	
+          }
+          
+      }
+      
+  }

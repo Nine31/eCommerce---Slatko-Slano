@@ -1,38 +1,55 @@
-<section class="bg-white py-16">
+<section *ngIf="signalrService.orderSignal() as order" class="bg-white py-16">
     <div class="mx-auto max-w-2xl px-4">
-        <h2 class="font-semibold text-2xl mb-2" id="title">Hvala na lažnoj narudžbi!</h2>
-        <p class="mb-8" id="text">Tvoja narudžba <span class="font-medium">#42</span>
-            nikada neće biti obrađene jer je ovo lažna radnja. Nećemo vas obavijestiti kada vaša narudžba ne bude poslana.
+        <h2 class="mb-2" id="title">Hvala na lažnoj narudžbi!</h2>
+        <p class="mb-8" id="text">Tvoja narudžba <span class="font-medium">#{{order.id}}</span>
+            nikada neće biti obrađen jer je ovo lažna radnja. Nećemo vas obavijestiti kada vaša narudžba ne bude poslana.
         </p>
         <div class="space-y-2 rounded-lg border border-blue-100 bg-blue-50 p-6 mb-8">
             <dl class="flex items-center justify-between gap-4">
                 <dt class="font-normal">Datum</dt>
                 <dd class="font-medium text-end">
-                    04 Sep 2024
+                    {{order.orderDate | date: 'medium'}}
                 </dd>
             </dl>
             <dl class="flex items-center justify-between gap-4">
                 <dt class="font-normal">Način plaćanja</dt>
                 <dd class="font-medium text-end">
-                    Visa
+                    {{order.paymentSummary | paymentCard}}
                 </dd>
             </dl>
             <dl class="flex items-center justify-between gap-4">
                 <dt class="font-normal">Adresa</dt>
                 <dd class="font-medium text-end">
-                    Ovdje ide adresa
+                    {{order.shippingAddress | address}}
                 </dd>
             </dl>
             <dl class="flex items-center justify-between gap-4">
                 <dt class="font-normal">Iznos</dt>
                 <dd class="font-medium text-end">
-                    58 KM
+                    {{order.total | currency:'':'':'1.2-2'}} KM
                 </dd>
             </dl>
         </div>
         <div class="flex items-center space-x-4">
-            <button routerLink="/narudžbine/42" id="narudzba" mat-stroked-button>Pogledajte svoju narudžbu</button>
+            <button routerLink="/narudzba/{{order.id}}" id="narudzba" mat-stroked-button>Pogledajte svoju narudžbu</button>
             <button routerLink="/prodavnica" id="kupovina" mat-stroked-button>Nastavite sa kupovinom</button>
+        </div>
+    </div>
+</section>
+
+<section *ngIf="!signalrService.orderSignal()" class="bg-white py-16">
+    <div class="mx-auto max-w-2xl px-4">
+        <h2 class="font-semibold text-2xl mb-2">Obrada narudžbe... molimo sačekajte</h2>
+
+        <div class="space-y-2 rounded-lg border border-gray-100 bg-gray-50 p-6 mb-8">
+            <div class="flex flex-col justify-center items-center">
+                <mat-spinner diameter="30"></mat-spinner>
+                <p class="text-xl">Učitavanje narudžbe...</p>
+                <span>Vaša uplata je primljena. Kreiramo narudžbu</span>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4">
+            <button routerLink="/prodavnica" mat-stroked-button>Nastavite kupovinu</button>
         </div>
     </div>
 </section>

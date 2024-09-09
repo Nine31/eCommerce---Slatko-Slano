@@ -26,7 +26,7 @@ export class LoginComponent {
   private accountService = inject(AccountService);
   private router = inject(Router);
   private activatedRoute = inject(ActivatedRoute);
-  returnUrl = '/blagajna';
+  returnUrl = '/prodavnica';
 
   constructor() {
     const url = this.activatedRoute.snapshot.queryParams['returnUrl'];
