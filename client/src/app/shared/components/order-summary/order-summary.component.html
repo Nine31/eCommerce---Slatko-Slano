@@ -41,28 +41,33 @@
     </div>
 
     <div class="space-y-4 rounded-lg border border-gray-200 bg-white shadow-sm">
-        <form class="space-y-2 flex flex-col p-2">
+        <form #form="ngForm" (ngSubmit)="applyCouponCode()" class="space-y-2 flex flex-col p-2">
             <label class="mb-2">
                 Imate li kod za vaučer?
             </label>
-            <!-- <div *ngIf="cartService.cart()?.coupon as coupon" class="flex justify-between items-center">
-                <span class="text-sm font-semibold">{{coupon.name}} applied</span>
+            <div *ngIf="cartService.cart()?.coupon as coupon" class="flex justify-between items-center">
+                <span class="text-sm font-semibold">{{coupon.name}} primijenjen</span>
                 <button
                     (click)="removeCouponCode()" 
                     mat-icon-button
                 >
                     <mat-icon color="warn">delete</mat-icon>
                 </button>
-            </div> -->
+            </div>
             <mat-form-field appearance="outline" id="form">
                 <mat-label>Vaučer kod</mat-label>
                 <input
+                    [disabled]="!!cartService.cart()?.coupon"
+                    [(ngModel)]="code" 
+                    name="code"
                     type="text" 
                     matInput
                 >
             </mat-form-field>
 
             <button 
+                [disabled]="!!cartService.cart()?.coupon"
+                type="submit" 
                 class="primjeni-kod" 
                 mat-flat-button>Primijeni kod</button>
         </form>

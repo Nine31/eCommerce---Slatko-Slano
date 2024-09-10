@@ -73,32 +73,18 @@ public class PaymentsController(IPaymentService paymentService, IUnitOfWork unit
             var order = await unit.Repository<Order>().GetEntityWithSpec(spec)
                 ?? throw new Exception("Narudžba nije pronađena");
 
-            if ((long)order.GetTotal() * 100 != intent.Amount)
+            var orderTotalInCents = (long)Math .Round(order.GetTotal() * 100, MidpointRounding.AwayFromZero);
+
+            if (orderTotalInCents != intent.Amount)
             {
                 order.Status = OrderStatus.PaymentMismatch;
             }
-            else 
+            else
             {
                 order.Status = OrderStatus.PaymentReceived;
             }
 
             await unit.Complete();
-
-            // TODO: SignalR
-
-            // var orderTotalInCents = (long)Math.Round(order.GetTotal() * 100, 
-            //     MidpointRounding.AwayFromZero);
-
-            // if (orderTotalInCents != intent.Amount)
-            // {
-            //     order.Status = OrderStatus.PaymentMismatch;
-            // } 
-            // else
-            // {
-            //     order.Status = OrderStatus.PaymentReceived;
-            // }
-
-            // await unit.Complete();
 
             var connectionId = NotificationHub.GetConnectionIdByEmail(order.BuyerEmail);
 
