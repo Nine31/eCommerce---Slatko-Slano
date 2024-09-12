@@ -8,13 +8,21 @@
                 class="pocetna">
                     Početna
             </a>
-            <a routerLink="prodavnica" 
+            <a  routerLink="prodavnica" 
                 routerLinkActive="active" 
                 class="prodavnica">
                     Prodavnica
             </a>
-            <a class="kontakt">
+            <a  routerLink="kontakt"    
+                routerLinkActive="active"
+                class="kontakt">
                     Kontakt
+            </a>
+            <a *appIsAdmin  
+                routerLink="admin"
+                routerLinkActive="active"
+                class="admin">
+                Admin
             </a>
         </nav>
         <div class="flex gap-3 align-middle">

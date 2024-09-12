@@ -1,0 +1,111 @@
+<div class="max-h-screen"></div>
+    <mat-tab-group class="tabs">
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="material-symbols-outlined">list_alt</mat-icon>
+                <span class="narudzbe">Narudžbe</span>
+            </ng-template>
+            <div class="flex justify-between items-center mt-2 max-w-screen-2xl mx-auto">
+                <h2>Narudžbe kupaca</h2>
+                <mat-form-field appearance="outline" class="mt-2">
+                    <mat-label class="select">Filtrirajte po statusu</mat-label>
+                    <mat-select (selectionChange)="onFilterSelect($event)">
+                        @for (status of statusOptions; track $index) {
+                            <mat-option class="select" [value]="status">{{translateOrderStatus(status)}}</mat-option>
+                        }
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="p-4">
+                <div class="mat-elevation-z8">
+                    <table mat-table [dataSource]="dataSource" class="tabell">
+                  
+                      <ng-container matColumnDef="id">
+                        <th mat-header-cell *matHeaderCellDef>Br:</th>
+                        <td mat-cell *matCellDef="let order">{{order.id}}</td>
+                      </ng-container>
+                  
+                      <ng-container matColumnDef="buyerEmail">
+                        <th mat-header-cell *matHeaderCellDef>E-pošta kupca</th>
+                        <td mat-cell *matCellDef="let order">{{order.buyerEmail}}</td>
+                      </ng-container>
+                  
+                      <ng-container matColumnDef="orderDate">
+                        <th mat-header-cell *matHeaderCellDef>Datum</th>
+                        <td mat-cell *matCellDef="let order">{{order.orderDate | date: 'short'}}</td>
+                      </ng-container>
+                  
+                      <ng-container matColumnDef="total">
+                        <th mat-header-cell *matHeaderCellDef>Ukupno</th>
+                        <td mat-cell *matCellDef="let order">{{order.total | currency:'':'':'1.2-2'}} KM</td>
+                      </ng-container>
+
+                      <ng-container matColumnDef="status">
+                        <th mat-header-cell *matHeaderCellDef>Status</th>
+                        <td mat-cell *matCellDef="let order">
+                            {{translateOrderStatus(order.status)}}
+                            <mat-icon class="placeno" *ngIf="order.status === 'PaymentReceived'">check_circle</mat-icon>
+                            <mat-icon class="neuspjesno" *ngIf="order.status === 'PaymentMismatch'">cancel</mat-icon>
+                            <mat-icon class="povrat-novca" *ngIf="order.status === 'Refunded'">credit_card</mat-icon>
+                            <mat-icon class="na-cekanju" *ngIf="order.status === 'Pending'">hourglass_empty</mat-icon>
+                        </td>
+                      </ng-container>
+
+                      <ng-container matColumnDef="action">
+                        <th mat-header-cell *matHeaderCellDef>Radnje</th>
+                        <td mat-cell *matCellDef="let order">
+                            <div class="flex gap-2">
+                                <button matTooltip="Pogledaj narudžbu" 
+                                    mat-icon-button routerLink="/narudzba/{{order.id}}">
+                                    <mat-icon class="view">visibility</mat-icon>
+                                </button>
+                                <button matTooltip="Refundiraj" 
+                                    [disabled]="order.status === 'Refunded'"
+                                    (click)="openConfirmDialog(order.id)"
+                                    mat-icon-button>
+                                    <mat-icon class="refund">undo</mat-icon>
+                                </button>
+                            </div>
+                            
+                        </td>
+                      </ng-container>
+                  
+                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                  
+                    <mat-paginator 
+                        class="pagination"
+                        [pageSizeOptions]="[5, 10, 20]"
+                        [length]="totalItems"
+                        [pageSize]="orderParams.pageSize"
+                        (page)="onPageChange($event)"
+                        showFirstLastButtons
+                    >
+                    </mat-paginator>
+                  </div>
+                  
+            </div>
+
+        </mat-tab>
+
+
+
+
+
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="material-symbols-outlined">person</mat-icon>
+                <span class="narudzbe">Kupci sa najvise narudžbi</span>
+            </ng-template>
+        </mat-tab>
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="material-symbols-outlined">view_cozy</mat-icon>
+                <span class="narudzbe">Razno</span>
+            </ng-template>
+        </mat-tab>
+    </mat-tab-group>
+

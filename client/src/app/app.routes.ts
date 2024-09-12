@@ -12,10 +12,14 @@ import { CheckoutSuccessComponent } from './features/checkout/checkout-success/c
 import { OrderComponent } from './features/orders/order.component';
 import { OrderDetailedComponent } from './features/orders/order-detailed/order-detailed.component';
 import { orderCompleteGuard } from './core/guards/order-complete.guard';
+import { AdminComponent } from './features/admin/admin.component';
+import { KontaktComponent } from './features/kontakt/kontakt/kontakt.component';
+import { adminGuard } from './core/guards/admin.guard';
 
 export const routes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'prodavnica', component: ShopComponent},
+    {path: 'kontakt', component: KontaktComponent},
     {path: 'prodavnica/:id', component: ProductDetailsComponent},
     {path: 'korpa', component: CartComponent},
     {path: 'blagajna', component: CheckoutComponent, canActivate: [authGuard, emptyCartGuard]},
@@ -24,5 +28,6 @@ export const routes: Routes = [
     {path: 'narudzba/:id', component: OrderDetailedComponent, canActivate: [authGuard]},
     {path: 'nalog/prijava', component: LoginComponent},
     {path: 'nalog/registracija', component: RegisterComponent},
+    {path: 'admin', component: AdminComponent, canActivate: [authGuard, adminGuard]},
     {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
